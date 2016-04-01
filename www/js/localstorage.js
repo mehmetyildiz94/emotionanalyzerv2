@@ -1,10 +1,22 @@
 // HET OPSLAAN VAN DE SETTINGS IN LOCALSTORAGE
 function saveAnalyseState() {
 	var jsonToString;
-	$('#saveAnalyse').on('change', function() {
-  	 	jsonToString = JSON.stringify({"value": $(this).val()});
+	    	alert('1');
+
+	if(window.localStorage.getItem('saveAnalyse') == null){
+		    	alert('2');
+
+		jsonToString = JSON.stringify({"value": "off"});
     	window.localStorage.setItem('saveAnalyse',  jsonToString);
-  	});
+    	alert('3');
+	}else{
+		$('#saveAnalyse').on('change', function() {
+  	 		jsonToString = JSON.stringify({"value": $(this).val()});
+    		window.localStorage.setItem('saveAnalyse',  jsonToString);
+  		});
+  		alert('else');
+	}
+	
 }
 
 // HET OPHALEN VAN SETTINGS. DIT OM BIJ HET OPSTARTEN VAN APP DIRECT OP 'ON' TE ZETTEN VAN APP
@@ -22,7 +34,13 @@ function saveAnalyseToStorage(data) {
 		var dataAnalyse = JSON.stringify(data);
     	window.localStorage.setItem(data._id, dataAnalyse);
 	}else{
-	 	alert('De analyse is niet opgeslagen.');
+	 	// navigator.notification.alert(
+	  //     'De analyse is niet opgeslagen.',  // message
+	  //       'callback',         // callback
+	  //       'Analyse',            // title
+	  //       'Close'                  // buttonName
+	  //   );
+	    navigator.notification.alert("De analyse is niet opgeslagen.", function(){}, "", "");
 	}
 }
 
