@@ -8,10 +8,13 @@
     },
     "installed_plugins": {
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.avans.emotionanalyzer"
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.avans.emotionanalyzer"
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
         }
     },
     "dependent_plugins": {}

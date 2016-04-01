@@ -21,6 +21,7 @@
                     <li><a href="#three" data-ajax="false">Instellingen</a></li>
                 </ul>
             </div>
+
             <div id="one">
                 <div data-role="main" class="ui-content">
                     <div id="analysis-input">
@@ -52,17 +53,29 @@
                     </div>
                 </div>
             </div>
-            <div id="two">
-                
-            </div>
+
             <div id="three">
-                
+            	<div id="settings-input">
+            		<div class="ui-field-contain">
+						<label for="saveAnalyse"><b>Geschienis lokaal opslaan:</b></label><br/>
+						<select name="saveAnalyse" id="saveAnalyse" data-role="slider">
+							<option value="off">Off</option>
+							<option value="on">On</option>
+						</select>
+					</div>
+            	</div>
+            	<div id="settings-info">
+            		 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s.</p>
+		      		<p><a onclick='window.open("http://google.com","_system", "location=yes")' href='javascript:void(0)' >link</a></p>
+		     		<p><a href="mailto:name@email.com">Demo mail</a></p>
+            	</div>
             </div>
         </div>
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/localstorage.js"></script>
         <script type="text/javascript" src="js/homepage.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">

@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -19,10 +23,13 @@
     },
     "installed_plugins": {
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.avans.emotionanalyzer"
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.avans.emotionanalyzer"
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
         }
     },
     "dependent_plugins": {},
@@ -33,6 +40,14 @@
             "pluginId": "cordova-plugin-device",
             "clobbers": [
                 "device"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
             ]
         }
     ]

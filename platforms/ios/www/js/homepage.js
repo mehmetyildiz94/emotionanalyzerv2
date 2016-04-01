@@ -19,9 +19,11 @@ $('#analyse-button').on('tap',function(event){
         contentType: "application/json",
         data: text,
         success: function (response) {
+            $('#text').val('');
             $("#analysis-input").hide();
             showResults(response);
             $("#analysis-result").show();
+            saveAnalyseToStorage(response);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
