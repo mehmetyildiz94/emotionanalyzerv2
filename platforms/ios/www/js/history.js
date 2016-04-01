@@ -17,7 +17,6 @@ function appendToHistory(key){
     $('#history').listview('refresh');
     
     $('ul#history li').on('click', function(event){
-        //event.preventDefault();
         var id = $(this).attr("id");
         showDetail(id);
         $("#history").hide();

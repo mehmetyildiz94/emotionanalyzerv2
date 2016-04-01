@@ -22,6 +22,9 @@
 		7A883453C1414C278E9AB335 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6435355AEE349D78DAA0A71 /* CDVNotification.bundle */; };
 		234806C0AF804BA09302BDFA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07212CD43BF5492C82EF52F2 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F72F9802A82B4A19800DB8F9 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D69134DE4B4EC09E57DF00 /* CDVLogger.m */; };
+		0F9CFC9421DC41078F7E3E07 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7ABDCAAF249C49DCE90C2 /* CDVFile.m */; };
+		59BC637AE4644781A5BF6C76 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 432A7D8EC70E4025BFA5F921 /* CDVLocalFilesystem.m */; };
+		5E886921226046F4972025C0 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54021B981475429F80572F61 /* CDVAssetLibraryFilesystem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,12 @@
 		07212CD43BF5492C82EF52F2 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		D5D69134DE4B4EC09E57DF00 /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		529637231FB04BD1B40D6762 /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		FAC7ABDCAAF249C49DCE90C2 /* CDVFile.m */ = {isa = PBXFileReference; name = "CDVFile.m"; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		432A7D8EC70E4025BFA5F921 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.m"; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		54021B981475429F80572F61 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.m"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E7F75FE381E347ED83AF6D1F /* CDVFile.h */ = {isa = PBXFileReference; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		989F18767E514909A4D158F6 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D3A1F5B0D37B4F8A83408EFD /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +197,12 @@
 				3B919D873FB9441FB13EB835 /* CDVNotification.h */,
 				D5D69134DE4B4EC09E57DF00 /* CDVLogger.m */,
 				529637231FB04BD1B40D6762 /* CDVLogger.h */,
+				FAC7ABDCAAF249C49DCE90C2 /* CDVFile.m */,
+				432A7D8EC70E4025BFA5F921 /* CDVLocalFilesystem.m */,
+				54021B981475429F80572F61 /* CDVAssetLibraryFilesystem.m */,
+				E7F75FE381E347ED83AF6D1F /* CDVFile.h */,
+				989F18767E514909A4D158F6 /* CDVLocalFilesystem.h */,
+				D3A1F5B0D37B4F8A83408EFD /* CDVAssetLibraryFilesystem.h */,
 			);
 			name = Plugins;
 			path = "emotionanalyzerv2/Plugins";
@@ -308,6 +323,9 @@
 				2F5E11D0CF4F4EA1B4794BC4 /* CDVViewController+SplashScreen.m in Sources */,
 				5B7650D520EA432D821B9E63 /* CDVNotification.m in Sources */,
 				F72F9802A82B4A19800DB8F9 /* CDVLogger.m in Sources */,
+				0F9CFC9421DC41078F7E3E07 /* CDVFile.m in Sources */,
+				59BC637AE4644781A5BF6C76 /* CDVLocalFilesystem.m in Sources */,
+				5E886921226046F4972025C0 /* CDVAssetLibraryFilesystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
