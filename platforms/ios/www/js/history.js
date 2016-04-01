@@ -32,8 +32,6 @@ $('#back-detail-button').on('tap', function(event){
     $('#hsentence-analysis tbody').empty();
 });
 
-
-
 function showDetail(id){
     var data = JSON.parse(localStorage[id]);
     var docTone = data.analysis.document_tone.tone_categories;
@@ -82,3 +80,14 @@ function showDetail(id){
         }
     }
 }
+
+// LAYOUT
+function setLayoutTablet(){
+    if ($(window).width() > 700) {
+        $('#back-detail-button').hide();
+    }else{
+        $('#back-detail-button').show();
+    }
+}
+
+
