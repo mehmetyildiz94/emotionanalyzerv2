@@ -28,12 +28,13 @@ function saveAnalyseToStorage(data) {
 		var dataAnalyse = JSON.stringify(data);
     	window.localStorage.setItem(data._id, dataAnalyse);
 	}else{
-	 	navigator.notification.alert(
-	      'De analyse is niet opgeslagen.',  // message
-	        'callback',         // callback
-	        'Analyse',            // title
-	        'Close'                  // buttonName
-	    );
+	 	// navigator.notification.alert(
+	  //     'De analyse is niet opgeslagen.',  // message
+	  //       'callback',         // callback
+	  //       'Analyse',            // title
+	  //       'Close'                  // buttonName
+	  //   );
+	    navigator.notification.alert("De analyse is niet opgeslagen.", function(){}, "", "");
 	}
 }
 
