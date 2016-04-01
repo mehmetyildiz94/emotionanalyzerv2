@@ -34,7 +34,7 @@
                             <li id="global-writing"></li>
                             <li id="global-social"></li>
                         </ul>
-                        
+
                         <h3>Zinnen</h3>
                         <table id="sentence-analysis" data-role="table" class="ui-responsive">
                             <thead>
@@ -52,7 +52,32 @@
                     </div>
                 </div>
             </div>
+            <div id="two">
+                <ul id="history" data-role="listview"></ul>
+                <div id="history-detail">
+                    <h3>Algemeen</h3>
+                        <ul class="global-result">
+                            <li id="hglobal-emotion"></li>
+                            <li id="hglobal-writing"></li>
+                            <li id="hglobal-social"></li>
+                        </ul>
 
+                        <h3>Zinnen</h3>
+                        <table id="hsentence-analysis" data-role="table" class="ui-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Zin</th>
+                                    <th>Emotie</th>
+                                    <th>Schrift</th>
+                                    <th>Sociaal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <input type="button" class="ui-btn" id="back-detail-button" value="Ga terug"/>
+                </div>
+            </div>
             <div id="three">
             	<div id="settings-input">
             		<div class="ui-field-contain">
@@ -77,11 +102,14 @@
         <script type="text/javascript" src="js/navigation.js"></script>
         <script type="text/javascript" src="js/localstorage.js"></script>
         <script type="text/javascript" src="js/homepage.js"></script>
+        <script type="text/javascript" src="js/history.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             document.addEventListener("deviceready", onDeviceReady, true);
             function onDeviceReady() {
-                $("#analysis-result").hide()
+                $("#analysis-result").hide();
+                $("#history-detail").hide();
+                loadHistory();
                 if(device.platform == 'iOS'){
                     $('#nav').addClass('header');
                 }
