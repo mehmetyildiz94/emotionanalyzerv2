@@ -23,10 +23,9 @@
             </div>
             <div id="one">
                 <div data-role="main" class="ui-content">
-                    
                     <div id="analysis-input">
                         <textarea name="text" id="text" placeholder="Voer tekst in."></textarea>
-                        <input class="ui-btn ui-btn-b" id="analyse-button" value="Analyse"></input>    
+                        <input type="button" class="ui-btn" id="analyse-button" value="Analyse"/>    
                     </div>
                     <div id="analysis-result">
                         <h3>Algemeen</h3>
@@ -46,14 +45,20 @@
                                     <th>Sociaal</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                            </tbody>
                         </table>
+                        <input type="button" class="ui-btn" id="back-result-button" value="Ga terug"/>
                     </div>
-                     
                 </div>
             </div>
+            <div id="two">
+                
+            </div>
+            <div id="three">
+                
+            </div>
         </div>
-        
-        
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -61,16 +66,12 @@
         <script type="text/javascript" src="js/homepage.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            //app.initialize();
             document.addEventListener("deviceready", onDeviceReady, true);
-            
-            // PhoneGap is ready
             function onDeviceReady() {
                 $("#analysis-result").hide()
                 if(device.platform == 'iOS'){
                     $('#nav').addClass('header');
                 }
-                
             }
         </script>
     </body>
