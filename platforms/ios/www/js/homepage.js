@@ -1,4 +1,3 @@
-
 $('#analyse-button').on('tap',function(event){
     event.preventDefault();
 
@@ -78,10 +77,10 @@ function showResults(data){
             }
             
             var row = '<tr><td>' + sentenceTone[i].text + '</td>' +
-            '<td>' + emotion + '</td>' +
-            '<td>' + writing + '</td>' +
-            '<td>' + social + '</td></tr>';
-            
+            '<td>' + emotion + ' - <img class="'+emotion.split(" ")[0]+'" src="">' + '</td>' +
+            '<td>' + writing + ' - <img class="'+writing.split(" ")[0]+'" src="">' + '</td>' +
+            '<td>' + social +  ' - <img class="'+social.split(" ")[0]+'" src="">' + '</td></tr>';
+            console.log(writing);
             $('#sentence-analysis tbody').append(row);
         }
     }

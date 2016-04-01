@@ -123,3 +123,89 @@ h1 {
     padding: 0;
     list-style-type: none; 
 }
+
+/* Sprites */
+.Anger {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 205.5px 120px;
+}
+
+.Disgust {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 392px 97px;
+}
+
+.Fear {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 392px 0;
+}
+
+.Joy {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) -15px 396px;
+}
+
+.Sadness {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 206px 0;
+}
+
+.Analytical {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 205.5px 97px;
+}
+
+.Confident {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 390px 49px;
+}
+
+.Tentative {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 205.5px 145px;
+}
+
+.Openness {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 299px 145px;
+}
+
+.Conscientiousness {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 206px 396px;
+}
+
+.Extraversion {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 113px 97px;
+}
+
+.Agreeableness {
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 206px 24px;
+}
+
+.Emotional.Range{
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 113px 145px;
+}
+
+.undefined{
+    width: 24px;
+    height: 25px;
+    background: url(../img/emoticons.gif) 392px 120px;
+}
+

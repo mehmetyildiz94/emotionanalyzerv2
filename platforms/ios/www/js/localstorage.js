@@ -23,8 +23,20 @@ function saveAnalyseToStorage(data) {
     	window.localStorage.setItem(data._id, dataAnalyse);
 	}else{
 	 	alert('De analyse is niet opgeslagen.');
+	 	navigator.notification.alert(
+	      'Analyse is saved.',  // message
+	        'callback',         // callback
+	        'Analyse',            // title
+	        'Close.'                  // buttonName
+	    );
 	}
 }
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.notification);
+}
+
 
 $(document).on( "ready", function() {
 	saveAnalyseState();

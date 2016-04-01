@@ -81,4 +81,5 @@
     <engine name="android" spec="~5.1.1" />
     <engine name="ios" spec="~4.0.1" />
     <plugin name="cordova-plugin-splashscreen" spec="~3.2.1" />
+    <plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
 </widget>
