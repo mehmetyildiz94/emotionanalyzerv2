@@ -1,4 +1,3 @@
-
 $('#analyse-button').on('tap',function(event){
     event.preventDefault();
 

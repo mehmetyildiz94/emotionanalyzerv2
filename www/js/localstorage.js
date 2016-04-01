@@ -23,6 +23,12 @@ function saveAnalyseToStorage(data) {
     	window.localStorage.setItem(data._id, dataAnalyse);
 	}else{
 	 	alert('De analyse is niet opgeslagen.');
+	 	navigator.notification.alert(
+	      'Analyse is saved.',  // message
+	        'callback',         // callback
+	        'Analyse',            // title
+	        'Close.'                  // buttonName
+	    );
 	}
 }
 
