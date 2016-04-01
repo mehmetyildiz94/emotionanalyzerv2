@@ -21,6 +21,7 @@ $('#analyse-button').on('tap',function(event){
             $("#analysis-input").hide();
             showResults(response);
             $("#analysis-result").show();
+            saveAnalyseToStorage(response);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
