@@ -1,14 +1,19 @@
 // HET OPSLAAN VAN DE SETTINGS IN LOCALSTORAGE
 function saveAnalyseState() {
 	var jsonToString;
+	    	console.log('1');
+
 	if(window.localStorage.getItem('saveAnalyse') == null){
+		    	console.log('2');
 		jsonToString = JSON.stringify({"value": "off"});
     	window.localStorage.setItem('saveAnalyse',  jsonToString);
+    	console.log('3');
 	}else{
 		$('#saveAnalyse').on('change', function() {
   	 		jsonToString = JSON.stringify({"value": $(this).val()});
     		window.localStorage.setItem('saveAnalyse',  jsonToString);
   		});
+  		console.log('else');
 	}
 	
 }
@@ -34,11 +39,12 @@ function saveAnalyseToStorage(data) {
 	  //       'Analyse',            // title
 	  //       'Close'                  // buttonName
 	  //   );
-	    navigator.notification.alert("PhoneGap is working", function(){}, "", "");
+	    navigator.notification.alert("De analyse is niet opgeslagen.", function(){}, "", "");
 	}
 }
 
 $(document).on( "ready", function() {
+	console.log('docready');
 	saveAnalyseState();
 	getAnalyseState();
 });
