@@ -212,7 +212,7 @@ h1 {
 
 /* LAYOUT */
 @media 
-  (min-device-width: 700px) {
+  (min-device-width: 768px) {
 
     #history{
         width: 33.333333% !important;
