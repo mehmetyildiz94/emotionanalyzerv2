@@ -82,4 +82,5 @@
     <engine name="ios" spec="~4.0.1" />
     <plugin name="cordova-plugin-splashscreen" spec="~3.2.1" />
     <plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
+    <plugin name="cordova-plugin-console" spec="~1.0.2" />
 </widget>

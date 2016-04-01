@@ -18,6 +18,9 @@
         },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
         }
     },
     "dependent_plugins": {}

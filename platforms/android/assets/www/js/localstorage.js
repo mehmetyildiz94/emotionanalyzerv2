@@ -5,6 +5,7 @@ function saveAnalyseState() {
 
 	if(window.localStorage.getItem('saveAnalyse') == null){
 		    	console.log('2');
+
 		jsonToString = JSON.stringify({"value": "off"});
     	window.localStorage.setItem('saveAnalyse',  jsonToString);
     	console.log('3');
@@ -44,7 +45,6 @@ function saveAnalyseToStorage(data) {
 }
 
 $(document).on( "ready", function() {
-	console.log('docready');
 	saveAnalyseState();
 	getAnalyseState();
 });
