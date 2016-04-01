@@ -2,7 +2,7 @@
 function saveAnalyseState() {
 	var jsonToString;
 	if(window.localStorage.getItem('saveAnalyse') == null){
-		jsonToString = JSON.stringify({"value": "off");
+		jsonToString = JSON.stringify({"value": "off"});
     	window.localStorage.setItem('saveAnalyse',  jsonToString);
 	}else{
 		$('#saveAnalyse').on('change', function() {
