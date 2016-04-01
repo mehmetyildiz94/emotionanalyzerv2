@@ -80,7 +80,6 @@ function showResults(data){
             '<td>' + emotion + ' - <img class="'+emotion.split(" ")[0]+'" src="">' + '</td>' +
             '<td>' + writing + ' - <img class="'+writing.split(" ")[0]+'" src="">' + '</td>' +
             '<td>' + social +  ' - <img class="'+social.split(" ")[0]+'" src="">' + '</td></tr>';
-            console.log(writing);
             $('#sentence-analysis tbody').append(row);
         }
     }
