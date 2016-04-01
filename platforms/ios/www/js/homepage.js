@@ -29,6 +29,12 @@ $('#analyse-button').on('tap',function(event){
     });
 });
 
+$('#back-result-button').on('tap', function(event){
+    event.preventDefault();
+    $("#analysis-result").hide();
+    $("#analysis-input").show();
+    $('#sentence-analysis tbody').empty();
+});
 
 function showResults(data){
     var docTone = data.analysis.document_tone.tone_categories;
@@ -52,9 +58,7 @@ function showResults(data){
     $("#global-writing").html("Writing: " + writing);
     $("#global-social").html("Social: " + social);
 
-    console.log("HERE");    
     if(sentenceTone){
-        console.log("HERE2");
         for(var i = 0; i < sentenceTone.length; i++){
             var categories = sentenceTone[i].tone_categories;
             
