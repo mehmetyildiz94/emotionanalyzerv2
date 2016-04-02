@@ -1,6 +1,6 @@
 function loadHistory(){
     for (var analyseItem in localStorage) {
-        if(analyseItem != 'saveAnalyse'){
+        if(analyseItem != 'saveAnalyse' && analyseItem != 'savePage'){
             appendToHistory(analyseItem);
         }
     }

@@ -23,6 +23,7 @@ $('#analyse-button').on('tap',function(event){
             showResults(response);
             $("#analysis-result").show();
             saveAnalyseToStorage(response);
+            appendToHistory(response._id);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);

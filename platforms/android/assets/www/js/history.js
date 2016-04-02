@@ -1,6 +1,6 @@
 function loadHistory(){
     for (var analyseItem in localStorage) {
-        if(analyseItem != 'saveAnalyse'){
+        if(analyseItem != 'saveAnalyse' && analyseItem != 'savePage'){
             appendToHistory(analyseItem);
         }
     }
@@ -83,7 +83,7 @@ function showDetail(id){
 
 // LAYOUT
 function setLayoutTablet(){
-    if ($(window).width() > 700) {
+    if ($(window).width() > 768) {
         $('#back-detail-button').hide();
     }else{
         $('#back-detail-button').show();
