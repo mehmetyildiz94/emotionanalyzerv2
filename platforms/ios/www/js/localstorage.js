@@ -1,7 +1,5 @@
-// HET OPSLAAN VAN DE SETTINGS IN LOCALSTORAGE
 function saveAnalyseState() {
 	var jsonToString;
-
 	if(window.localStorage.getItem('saveAnalyse') == null){
 		jsonToString = JSON.stringify({"value": "off"});
     	window.localStorage.setItem('saveAnalyse',  jsonToString);
@@ -13,14 +11,12 @@ function saveAnalyseState() {
 	}
 }
 
-// HET OPHALEN VAN SETTINGS. DIT OM BIJ HET OPSTARTEN VAN APP DIRECT OP 'ON' TE ZETTEN VAN APP
 function getAnalyseState() {
  	var currentState = window.localStorage.getItem('saveAnalyse');
  	var stringToJson = JSON.parse(currentState);
   	$('#saveAnalyse').val(stringToJson.value).change();
 }
 
-// HIER SLA IK ANALYSE OP. IK SLA HET OP IN LOCALSTORAGE
 function saveAnalyseToStorage(data) {
 	var currentState = window.localStorage.getItem('saveAnalyse');
  	var stringToJson = JSON.parse(currentState);
@@ -32,8 +28,33 @@ function saveAnalyseToStorage(data) {
 	}
 }
 
+function savePageToStorage() {
+	var jsonToString;
+	var tab_id;
+	if(window.localStorage.getItem('savePage') == null){
+		jsonToString = JSON.stringify({"page_id": "tab-one"});
+    	window.localStorage.setItem('savePage',  jsonToString);
+	}else{
+		$("#tabs").tabs({
+		  beforeActivate: function (event, ui) {
+		   tab_id = ui.newTab.children().attr('id');
+		   jsonToString = JSON.stringify({"value": tab_id});
+		   window.localStorage.setItem('savePage',  jsonToString);
+		  }
+		});
+	}
+}
+
+function getPageState() {
+ 	var currentState = window.localStorage.getItem('savePage');
+ 	var stringToJson = JSON.parse(currentState);
+  	setNavBarActive(stringToJson.value);
+}
+
 $(document).on( "ready", function() {
 	saveAnalyseState();
 	getAnalyseState();
+	savePageToStorage();
+	getPageState();
 });
 

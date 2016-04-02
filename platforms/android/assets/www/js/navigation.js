@@ -3,3 +3,9 @@ $(document).on("tabsbeforeactivate", "#tabs", function (e, ui) {
         $(this).removeClass("in pop");
     });
 });
+
+function setNavBarActive(id) {
+   $('#'+id).trigger('click');
+}
+
+
