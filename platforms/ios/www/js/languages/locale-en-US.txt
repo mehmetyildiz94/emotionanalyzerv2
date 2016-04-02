@@ -1,0 +1,22 @@
+{
+  "TR_TAB_ONE": "Analyze",
+  "TR_TAB_TWO": "History",
+  "TR_TAB_THREE": "Settings",
+  "TR_BUTTON_ANALYSE": "Analyze",
+  "TR_BUTTON_SAMPLE": "Sample",
+  "TR_TEXTAREA": "Write here your text.",
+  "TR_LABEL_ANSAVE": "Save analysis locally:",
+  "TR_INPUT_ANSAVE_YES": "ON",
+  "TR_INPUT_ANSAVE_NO": "OFF",
+  "TR_INFORMATION": "This app gives emotional analysis of sentences.",
+  "TR_LINK": "See the documentation.",
+  "TR_MAIL": "Send us a email.",
+  "TR_ALERT_NOTSAVED": "The analyze is not saved.",
+  "TR_DETAILS_GLOBAL": "General",
+  "TR_DETAILS_SENTENCES": "Sentences",
+  "TR_BUTTON_BACK": "Go back.",
+  "TR_SENTENCE": "Sentece",
+  "TR_EMOTION": "Emotion",
+  "TR_WRITING": "Writing",
+  "TR_SOCIAL": "Social"
+}

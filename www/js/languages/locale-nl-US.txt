@@ -1,0 +1,22 @@
+{
+  "TR_TAB_ONE": "Analyseren",
+  "TR_TAB_TWO": "Geschiedenis",
+  "TR_TAB_THREE": "Instellingen",
+  "TR_BUTTON_ANALYSE": "Analyseren",
+  "TR_BUTTON_SAMPLE": "Voorbeeld",
+  "TR_TEXTAREA": "Schrijf hier uw tekst",
+  "TR_LABEL_ANSAVE": "Sla analyse lokaal op:",
+  "TR_INPUT_ANSAVE_YES": "AAN",
+  "TR_INPUT_ANSAVE_NO": "UIT",
+  "TR_INFORMATION": "Deze app geeft emotionele analyse van zinnen.",
+  "TR_LINK": "Bekijk de documentatie.",
+  "TR_MAIL": "Stuur ons een e-mail.",
+  "TR_ALERT_NOTSAVED": "Het analyseren wordt niet opgeslagen.",
+  "TR_DETAILS_GLOBAL": "Algemeen",
+  "TR_DETAILS_SENTENCES": "Zinnen",
+  "TR_BUTTON_BACK": "Ga terug.",
+  "TR_SENTENCE": "Zin",
+  "TR_EMOTION": "Emotie",
+  "TR_WRITING": "Schrift",
+  "TR_SOCIAL": "Sociaal"
+}

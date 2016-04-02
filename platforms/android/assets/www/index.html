@@ -29,21 +29,21 @@
                         <input type="button" class="ui-btn" id="sample-button" value="Voorbeeld"/>    
                     </div>
                     <div id="analysis-result">
-                        <h3>Algemeen</h3>
+                        <h3 id="TR_DETAILS_GLOBAL">Algemeen</h3>
                         <ul class="global-result">
                             <li id="global-emotion"></li>
                             <li id="global-writing"></li>
                             <li id="global-social"></li>
                         </ul>
 
-                        <h3>Zinnen</h3>
+                        <h3 id="TR_DETAILS_SENTENCES">Zinnen</h3>
                         <table id="sentence-analysis" data-role="table" class="ui-responsive">
                             <thead>
                                 <tr>
-                                    <th>Zin</th>
-                                    <th>Emotie</th>
-                                    <th>Schrift</th>
-                                    <th>Sociaal</th>
+                                    <th id="TR_SENTENCE">Zin</th>
+                                    <th id="TR_EMOTION">Emotie</th>
+                                    <th id="TR_WRITING">Schrift</th>
+                                    <th id="TR_SOCIAL">Sociaal</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,21 +56,21 @@
             <div id="two">
                 <ul id="history" data-role="listview"></ul>
                 <div id="history-detail">
-                    <h3>Algemeen</h3>
+                    <h3 id="TR_DETAILS_GLOBAL">Algemeen</h3>
                         <ul class="global-result">
                             <li id="hglobal-emotion"></li>
                             <li id="hglobal-writing"></li>
                             <li id="hglobal-social"></li>
                         </ul>
 
-                        <h3>Zinnen</h3>
+                        <h3 id="TR_DETAILS_SENTENCES">Zinnen</h3>
                         <table id="hsentence-analysis" data-role="table" class="ui-responsive">
                             <thead>
                                 <tr>
-                                    <th>Zin</th>
-                                    <th>Emotie</th>
-                                    <th>Schrift</th>
-                                    <th>Sociaal</th>
+                                    <th id="TR_SENTENCE">Zin</th>
+                                    <th id="TR_EMOTION">Emotie</th>
+                                    <th id="TR_WRITING">Schrift</th>
+                                    <th id="TR_SOCIAL">Sociaal</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -82,17 +82,17 @@
             <div id="three">
             	<div id="settings-input">
             		<div class="ui-field-contain">
-						<label for="saveAnalyse"><b>Geschienis lokaal opslaan:</b></label><br/>
+						<label for="saveAnalyse" id="TR_LABEL_ANSAVE"><b>Geschienis lokaal opslaan:</b></label><br/>
 						<select name="saveAnalyse" id="saveAnalyse" data-role="slider">
-							<option value="off">Off</option>
-							<option value="on">On</option>
+							<option value="off" id="TR_INPUT_ANSAVE_YES">Off</option>
+							<option value="on" id="TR_INPUT_ANSAVE_NO">On</option>
 						</select>
 					</div>
             	</div>
             	<div id="settings-info">
-            		 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s.</p>
-		      		<p><a onclick='window.open("http://google.com","_system", "location=yes")' href='javascript:void(0)' >link</a></p>
-		     		<p><a href="mailto:name@email.com">Demo mail</a></p>
+            		 <p id="TR_INFORMATION">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s.</p>
+		      		<p><a onclick='window.open("http://google.com","_system", "location=yes")' href='javascript:void(0)' id="TR_LINK">link</a></p>
+		     		<p><a href="mailto:name@email.com" id="TR_MAIL">Demo mail</a></p>
             	</div>
             </div>
         </div>
@@ -113,7 +113,8 @@
                 $("#history-detail").hide();
                 loadHistory();
                 setLayoutTablet();
-                if(device.platform == 'iOS'){
+                appLanguage();
+            if(device.platform == 'iOS'){
                     $('#nav').addClass('header');
                 }
             }
