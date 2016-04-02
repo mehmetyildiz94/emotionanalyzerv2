@@ -32,6 +32,7 @@ function savePageToStorage() {
 	var jsonToString;
 	var tab_id;
 	if(window.localStorage.getItem('savePage') == null){
+		setNavBarActive("tab-one")
 		jsonToString = JSON.stringify({"page_id": "tab-one"});
     	window.localStorage.setItem('savePage',  jsonToString);
 	}else{
@@ -49,6 +50,18 @@ function getPageState() {
  	var currentState = window.localStorage.getItem('savePage');
  	var stringToJson = JSON.parse(currentState);
   	setNavBarActive(stringToJson.value);
+}
+
+$(document).on("tabsbeforeactivate", "#tabs", function (e, ui) {
+    $(ui.newPanel).addClass("in pop").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $(this).removeClass("in pop");
+        saveAnalyseState();
+        savePageToStorage();
+    });
+});
+
+function setNavBarActive(id) {
+   $('#'+id).trigger('click');
 }
 
 $(document).on( "ready", function() {

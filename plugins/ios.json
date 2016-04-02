@@ -24,6 +24,9 @@
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "nl.avans.aii.cmd.emotionanalyzer"
         }
     },
     "dependent_plugins": {}
