@@ -15,9 +15,9 @@
         <div data-role="tabs" id="tabs">
             <div id="nav" data-role="navbar">
                 <ul>
-                    <li><a href="#one" data-ajax="false">Analyse</a></li>
-                    <li><a href="#two" data-ajax="false">Geschiedenis</a></li>
-                    <li><a href="#three" data-ajax="false">Instellingen</a></li>
+                    <li><a id="tab-one" href="#one" data-ajax="false">Analyse</a></li>
+                    <li><a id="tab-two" href="#two" data-ajax="false">Geschiedenis</a></li>
+                    <li><a id="tab-three" href="#three" data-ajax="false">Instellingen</a></li>
                 </ul>
             </div>
 
@@ -111,7 +111,7 @@
             function onDeviceReady() {
                 $("#analysis-result").hide();
                 $("#history-detail").hide();
-                loadHistory();
+                // loadHistory();
                 setLayoutTablet();
                 if(device.platform == 'iOS'){
                     $('#nav').addClass('header');
