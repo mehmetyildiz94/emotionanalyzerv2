@@ -83,7 +83,7 @@ function showDetail(id){
 
 // LAYOUT
 function setLayoutTablet(){
-    if ($(window).width() > 768) {
+    if ($(window).width() > 700) {
         $('#back-detail-button').hide();
     }else{
         $('#back-detail-button').show();
