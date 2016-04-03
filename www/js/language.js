@@ -24,7 +24,8 @@ function appLanguage(){
 
 	navigator.globalization.getPreferredLanguage(
 	    function (language) {
-	    	alert('language: ' + language.value + '\n'); lang = language.value;
+	    	// alert('language: ' + language.value + '\n'); 
+	    	lang = language.value;
 
 			$.get('js/languages/locale-'+lang+'.txt', function(data) {
 		  		TR_TAB_ONE = $.parseJSON(data).TR_TAB_ONE;
@@ -74,3 +75,7 @@ function appLanguage(){
 	);
 
 }
+
+$(window).load(function() {
+	$(".loader").fadeOut(2000);
+})
