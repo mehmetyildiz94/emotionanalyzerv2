@@ -7,7 +7,9 @@ function loadHistory(){
 }
 
 function appendToHistory(key){
-    var analysis = JSON.parse(localStorage[key]);
+    if(key != 'saveAnalyse' && key != 'savePage'){
+       var analysis = JSON.parse(localStorage[key]);
+    }
     
     var li = "<li id='" + analysis._id + "'> <a href='#'>" +
     analysis.text.substring(0,20) + "... " + analysis.date.split("T")[0] + 
