@@ -23,7 +23,11 @@ $('#analyse-button').on('tap',function(event){
             showResults(response);
             $("#analysis-result").show();
             saveAnalyseToStorage(response);
-            appendToHistory(response._id);
+            var currentState = window.localStorage.getItem('saveAnalyse');
+            var stringToJson = JSON.parse(currentState);
+            if(stringToJson.value == "on"){
+                appendToHistory(response._id);
+            }
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
