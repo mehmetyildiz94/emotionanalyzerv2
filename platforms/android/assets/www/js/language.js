@@ -76,6 +76,6 @@ function appLanguage(){
 
 }
 
-$(window).load(function() {
-	$(".loader").fadeOut(2000);
-})
+// $(window).load(function() {
+// 	$(".loader").fadeOut(2000);
+// })
