@@ -7,9 +7,10 @@ function loadHistory(){
 }
 
 function appendToHistory(key){
-    if(key != 'saveAnalyse' && key != 'savePage'){
-       var analysis = JSON.parse(localStorage[key]);
-    }
+    var analysis = JSON.parse(localStorage[key]);
+    console.log(localStorage[key]);
+    console.log(analysis);
+    console.log(JSON.parse(localStorage[key]));
     
     var li = "<li id='" + analysis._id + "'> <a href='#'>" +
     analysis.text.substring(0,20) + "... " + analysis.date.split("T")[0] + 
@@ -83,13 +84,13 @@ function showDetail(id){
     }
 }
 
-// LAYOUT
-function setLayoutTablet(){
-    if ($(window).width() > 768) {
-        $('#back-detail-button').hide();
-    }else{
-        $('#back-detail-button').show();
-    }
-}
+// // LAYOUT
+// function setLayoutTablet(){
+//     if ($(window).width() > 768) {
+//         $('#back-detail-button').hide();
+//     }else{
+//         $('#back-detail-button').show();
+//     }
+// }
 
 

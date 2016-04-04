@@ -211,7 +211,7 @@ h1 {
 
 
 /* LAYOUT */
-@media 
+/*@media 
   (min-device-width: 768px) {
 
     #history{
@@ -241,5 +241,5 @@ h1 {
     background-image: url('../splash.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
