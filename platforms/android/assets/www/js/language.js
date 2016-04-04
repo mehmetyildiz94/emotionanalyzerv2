@@ -71,7 +71,7 @@ function appLanguage(){
 
 			}); 
 	    },
-	    function () {alert('Error getting language\n');}
+	    function () {console.log('Error getting language\n');}
 	);
 
 }

@@ -7,9 +7,7 @@ function loadHistory(){
 }
 
 function appendToHistory(key){
-    console.log(localStorage[key]);
-    console.log(analysis);
-    console.log(JSON.parse(localStorage[key]));
+    console.log(key);
     var analysis = JSON.parse(localStorage[key]);
 
     
