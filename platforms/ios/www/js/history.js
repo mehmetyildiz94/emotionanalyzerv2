@@ -39,6 +39,7 @@ function showDetail(id){
     var sentenceTone = data.analysis.sentences_tone;
     
     var emotion, writing, social;
+    var emotion_img, writing_img, social_img;
     
     //document_tone algemene analyse
     for(var i = 0; i < docTone.length; i++){
@@ -72,23 +73,19 @@ function showDetail(id){
                     social = highestValue(categories[j].tones);
                 }
             }
-            
-            var row = '<tr><td>' + sentenceTone[i].text + '</td>' +
-            '<td>' + emotion + ' - <img class="'+emotion.split(" ")[0]+'" src="">' + '</td>' +
-            '<td>' + writing + ' - <img class="'+writing.split(" ")[0]+'" src="">' + '</td>' +
-            '<td>' + social +  ' - <img class="'+social.split(" ")[0]+'" src="">' + '</td></tr>';
+
+            if(emotion.replace(" ", "%").split("%")[0] == 0){emotion_img="undefined";}else{emotion_img=emotion.replace(" ", "%").split("%")[0];}
+            if(writing.replace(" ", "%").split("%")[0] == 0){writing_img="undefined";}else{writing_img=writing.replace(" ", "%").split("%")[0];}
+            if(social.replace(" ", "%").split("%")[0] == 0){social_img="undefined";}else{social_img=social.replace(" ", "%").split("%")[0];}
+
+            var row = '<tr><td class="text-bold">' + sentenceTone[i].text + '</td>' +
+            '<td id="'+emotion_img+'">' + emotion + ' - <img class="'+emotion_img+'" src="img/img_trans.gif">' + '</td>' +
+            '<td id="'+writing_img+'">' + writing + ' - <img class="'+writing_img+'" src="img/img_trans.gif">' + '</td>' +
+            '<td id="'+social_img+'">' + social +  ' - <img class="'+social_img+'" src="img/img_trans.gif">' + '</td></tr>';
             $('#hsentence-analysis tbody').append(row);
         }
     }
 }
 
-// // LAYOUT
-// function setLayoutTablet(){
-//     if ($(window).width() > 768) {
-//         $('#back-detail-button').hide();
-//     }else{
-//         $('#back-detail-button').show();
-//     }
-// }
 
 

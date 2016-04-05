@@ -15,7 +15,7 @@
         <div data-role="tabs" id="tabs">
             <div id="nav" data-role="navbar">
                 <ul>
-                    <li><a id="tab-one" href="#one" data-ajax="false">Analyse</a></li>
+                    <li><a id="tab-one" href="#one" data-ajax="false">Analyseren</a></li>
                     <li><a id="tab-two" href="#two" data-ajax="false">Geschiedenis</a></li>
                     <li><a id="tab-three" href="#three" data-ajax="false">Instellingen</a></li>
                 </ul>
@@ -24,9 +24,9 @@
             <div id="one">
                 <div data-role="main" class="ui-content">
                     <div id="analysis-input">
-                        <textarea name="text" id="text" placeholder="Voer tekst in."></textarea>
-                        <input type="button" class="ui-btn" id="analyse-button" value="Analyse"/>
-                        <input type="button" class="ui-btn" id="sample-button" value="Voorbeeld"/>    
+                        <textarea name="text" id="text" placeholder="Schrijf hier uw tekst"></textarea>
+                        <input type="button" class="ui-btn" id="analyse-button" value="Analyseren"/>
+                        <input type="button" class="ui-btn" id="sample-button" value="Voorbeeld"/>   
                     </div>
                     <div id="analysis-result">
                         <h3 id="TR_DETAILS_GLOBAL">Algemeen</h3>
@@ -82,17 +82,18 @@
             <div id="three">
             	<div id="settings-input">
             		<div class="ui-field-contain">
-						<label for="saveAnalyse" id="TR_LABEL_ANSAVE"><b>Geschienis lokaal opslaan:</b></label><br/>
+						<label for="saveAnalyse" id="TR_LABEL_ANSAVE"><b>Sla analyse lokaal op:</b></label><br/>
 						<select name="saveAnalyse" id="saveAnalyse" data-role="slider">
-							<option value="off" id="TR_INPUT_ANSAVE_YES">Off</option>
-							<option value="on" id="TR_INPUT_ANSAVE_NO">On</option>
+							<option value="off" id="TR_INPUT_ANSAVE_YES">AAN</option>
+							<option value="on" id="TR_INPUT_ANSAVE_NO">UIT</option>
 						</select>
 					</div>
             	</div>
             	<div id="settings-info">
-            		 <p id="TR_INFORMATION">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s.</p>
-		      		<p><a onclick='window.open("http://google.com","_system", "location=yes")' href='javascript:void(0)' id="TR_LINK">link</a></p>
-		     		<p><a href="mailto:name@email.com" id="TR_MAIL">Demo mail</a></p>
+            		 <p id="TR_INFORMATION">Deze app geeft emotionele analyse van zinnen.</p>
+		      		<p><a onclick='window.open("http://google.com","_system", "location=yes")' href='javascript:void(0)' id="TR_LINK">Bekijk de documentatie.</a></p>
+		     		<p><a href="mailto:support@emotionteam.com?SUBJECT=Reactie" id="TR_MAIL">Stuur ons een e-mail.</a></p>
+                    <p><a href="tel:0652589747" id="TR_PHONE">Bel ons</a></p>
             	</div>
             </div>
         </div>
@@ -112,7 +113,6 @@
                 $("#analysis-result").hide();
                 $("#history-detail").hide();
                 loadHistory();
-                // setLayoutTablet();
                 appLanguage();
             if(device.platform == 'iOS'){
                     $('#nav').addClass('header');

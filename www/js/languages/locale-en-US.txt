@@ -11,6 +11,7 @@
   "TR_INFORMATION": "This app gives emotional analysis of sentences.",
   "TR_LINK": "See the documentation.",
   "TR_MAIL": "Send us a email.",
+  "TR_PHONE": "Call us.",
   "TR_ALERT_NOTSAVED": "The analyze is not saved.",
   "TR_DETAILS_GLOBAL": "General",
   "TR_DETAILS_SENTENCES": "Sentences",

@@ -124,6 +124,11 @@ h1 {
     list-style-type: none; 
 }
 
+.text-bold{
+    font-weight: bold;
+    border-top: 1px solid #999;
+}
+
 /* Sprites */
 .Anger {
     width: 24px;
@@ -131,10 +136,19 @@ h1 {
     background: url(../img/emoticons.gif) 205.5px 120px;
 }
 
+#Anger {
+    color: #E80521;
+}
+
+
 .Disgust {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) 392px 97px;
+}
+
+#Disgust {
+    color: #592684;
 }
 
 .Fear {
@@ -143,10 +157,18 @@ h1 {
     background: url(../img/emoticons.gif) 392px 0;
 }
 
+#Fear {
+    color: #325E2B;
+}
+
 .Joy {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) -15px 396px;
+}
+
+#Joy {
+    color: #FFD629;
 }
 
 .Sadness {
@@ -155,10 +177,18 @@ h1 {
     background: url(../img/emoticons.gif) 206px 0;
 }
 
+#Sadness {
+    color: #086DB2;
+}
+
 .Analytical {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) 205.5px 97px;
+}
+
+#Analytical {
+    color: #075CD8;
 }
 
 .Confident {
@@ -167,10 +197,18 @@ h1 {
     background: url(../img/emoticons.gif) 390px 49px;
 }
 
+#Confident {
+    color: #19A3F7;
+}
+
 .Tentative {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) 205.5px 145px;
+}
+
+#Tentative {
+    color: #096dff;
 }
 
 .Openness {
@@ -179,10 +217,18 @@ h1 {
     background: url(../img/emoticons.gif) 299px 145px;
 }
 
+#Openness {
+    color: #0f8476;
+}
+
 .Conscientiousness {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) 206px 396px;
+}
+
+#Conscientiousness {
+    color: #13a997;
 }
 
 .Extraversion {
@@ -191,45 +237,39 @@ h1 {
     background: url(../img/emoticons.gif) 113px 97px;
 }
 
+#Extraversion {
+    color: #16c1ac;
+}
+
 .Agreeableness {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) 206px 24px;
 }
 
-.Emotional.Range{
+#Agreeableness {
+    color: #1be9d0;
+}
+
+.Emotional {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) 113px 145px;
 }
 
-.undefined{
+#Emotional {
+    color: #1cf6db;
+}
+
+.undefined {
     width: 24px;
     height: 25px;
     background: url(../img/emoticons.gif) 392px 120px;
 }
 
-
-/* LAYOUT */
-/*@media 
-  (min-device-width: 768px) {
-
-    #history{
-        width: 33.333333% !important;
-        height: 100% !important;
-        display: block !important;
-        float: left;
-    }
-
-    #history-detail{
-        width: 66.666666% !important;
-        display: inline-block !important;
-        float: right;
-        padding: 10px;
-        border-left: 3px solid #666;
-    }
-
-}*/
+#undefined {
+    color: #333;
+}
 
 .loader {
     position: fixed;

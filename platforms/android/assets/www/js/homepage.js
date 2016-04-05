@@ -1,9 +1,7 @@
 $('#analyse-button').on('tap',function(event){
     event.preventDefault();
 
-    // VARIABLES OPHALEN TEXT EN CONTROLEREN OF HET EINDIGT OP INTERPUNCTIE
     var text = $('#text').val();
-    //var regex = /[^\r\n.!?]+(:?(:?\r\n|[\r\n]|[.!?])+|$)/gi;
     regex = /\n|([^\r\n.!?]+([.!?]+|$))/gim;
     //cannot read property 'map' of null wnr 1 zin met punt.
     var split = text.match(regex).map($.trim);
@@ -13,7 +11,7 @@ $('#analyse-button').on('tap',function(event){
     $.ajax({
         beforeSend: function() { $.mobile.loading("show") }, 
         complete: function() { $.mobile.loading("hide") },
-        url: "https://emotionanalyzer.herokuapp.com/analyzer/analyze",
+        url: "https://emotionanalyzer.herokuapp.com/analyzer",
         type: "post",
         contentType: "application/json",
         data: text,
@@ -47,7 +45,8 @@ function showResults(data){
     var sentenceTone = data.analysis.sentences_tone;
     
     var emotion, writing, social;
-    
+    var emotion_img, writing_img, social_img;
+
     //document_tone algemene analyse
     for(var i = 0; i < docTone.length; i++){
         if(docTone[i].category_name == "Emotion Tone"){
@@ -80,11 +79,15 @@ function showResults(data){
                     social = highestValue(categories[j].tones);
                 }
             }
+
+            if(emotion.replace(" ", "%").split("%")[0] == 0){emotion_img="undefined";}else{emotion_img=emotion.replace(" ", "%").split("%")[0];}
+            if(writing.replace(" ", "%").split("%")[0] == 0){writing_img="undefined";}else{writing_img=writing.replace(" ", "%").split("%")[0];}
+            if(social.replace(" ", "%").split("%")[0] == 0){social_img="undefined";}else{social_img=social.replace(" ", "%").split("%")[0];}
             
-            var row = '<tr><td>' + sentenceTone[i].text + '</td>' +
-            '<td>' + emotion + ' - <img class="'+emotion.split(" ")[0]+'" src="">' + '</td>' +
-            '<td>' + writing + ' - <img class="'+writing.split(" ")[0]+'" src="">' + '</td>' +
-            '<td>' + social +  ' - <img class="'+social.split(" ")[0]+'" src="">' + '</td></tr>';
+            var row = '<tr><td class="text-bold">' + sentenceTone[i].text + '</td>' +
+            '<td id="'+emotion_img+'">' + emotion + ' - <img class="'+emotion_img+'" src="img/img_trans.gif">' + '</td>' +
+            '<td id="'+writing_img+'">' + writing + ' - <img class="'+writing_img+'" src="img/img_trans.gif">' + '</td>' +
+            '<td id="'+social_img+'">' + social +  ' - <img class="'+social_img+'" src="img/img_trans.gif">' + '</td></tr>';
             $('#sentence-analysis tbody').append(row);
         }
     }
